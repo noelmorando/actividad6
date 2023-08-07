@@ -5,5 +5,5 @@ export interface DataUser {
     "per_page":number
     "total":number
     "total_pages":number
-    "results":any
+    "results":User
 }

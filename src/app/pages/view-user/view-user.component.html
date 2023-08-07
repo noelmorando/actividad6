@@ -1,1 +1,23 @@
-<p>view-user works!</p>
+<section class="m-3 d-flex justify-content-around mt-5">
+    <img src="{{oneUser.image}}">
+    <span class="vl"></span>
+    <div class="d-flex flex-column m-3">
+        <div>
+            <h2 class="mb-3">{{oneUser.first_name}}</h2>
+            <h2 class="mb-3">{{oneUser.last_name}}</h2>
+        </div>
+        <div class="mb-3">
+            <span class="container__username container__font-size">Nombre usuario: </span>
+            <span class="container__font-size">{{oneUser.username}}</span>
+        </div> 
+        <div class="mb-3">
+            <span class="container__username container__font-size">Email: </span>
+            <span class="container__font-size">{{oneUser.email}}</span>
+        </div>
+        <div class="mb-3 mt-5">
+            <input type="text" id="eliminar" value="Eliminiar" class="btn btn-outline-dark container__font-size" (click)="deleteUser(oneUser._id)">
+            <input type="text" id="actualizar" value="Actualizar" class="btn btn-outline-dark container__font-size" [routerLink]="['/updateuser',oneUser?._id]">
+            <input type="text" id="volver" value="Volver al listado" class="btn btn-outline-dark container__font-size" [routerLink]="['/home']">
+        </div>
+    </div>
+</section>

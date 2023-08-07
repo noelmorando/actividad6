@@ -1,0 +1,27 @@
+<form [formGroup]="userForm" (ngSubmit)="getDataForm()" class="container mt-3">
+    <div class="my-2">
+        <label for="userName" class="form-label">Nombre Usuario</label>
+        <input class="form-control" type="text" id="userName" placeholder="Introduce un nombre" formControlName="userName">
+    </div>
+    <p class="error" *ngIf="checkControl('userName','required')">Este campo es requerido</p>
+    <p class="error" *ngIf="checkControl('userName','minlength')">La longitud minima es de tres caracteres</p>
+    <div class="my-2">
+        <label for="userSurname" class="form-label">Apellido Usuario</label>
+        <input class="form-control" type="text" id="userSurname" placeholder="introduce un apellido" formControlName="userSurname">
+    </div>
+    <p class="error" *ngIf="checkControl('userSurname','required')">Este campo es requerido</p>
+    <p class="error" *ngIf="checkControl('userSurname','minlength')">La longitud minima es de tres caracteres</p>
+    <div class="my-2">
+        <label for="userEmail" class="form-label">Email Usuario</label>
+        <input class="form-control" type="text" id="userEmail" placeholder="Introduce un email" formControlName="userEmail">
+    </div>
+    <p class="error" *ngIf="checkControl('userEmail','pattern')">El email no es válido</p>
+    <p class="error" *ngIf="checkControl('userEmail','required')">Este campo es requerido</p>
+    <div class="my-2">
+        <label for="userImg" class="form-label">Email Usuario</label>
+        <input class="form-control" type="text" id="userImg" placeholder="Introduce un enlace de imagen" formControlName="userImg">
+    </div>
+    <p class="error" *ngIf="checkControl('userImg','required')">Este campo es requerido</p>
+    <p class="error" *ngIf="checkControl('userImg','pattern')">El enlace no es válido</p>
+    <input type="submit" class="mt-3 btn btn-outline-dark" value={{btn_value}} [disabled]="!userForm.valid">
+</form>

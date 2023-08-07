@@ -1,7 +1,12 @@
-  <section class="container mt-3">
+  <section class="container mt-3 mb-3">
     <div class="row g-3">
       <article class="col-12 col-md-6 col-lg-4" *ngFor="let user of infoUsers">
         <app-user-card [oneUser]="user"></app-user-card>
       </article>
+    </div>
+    <div class="container m-4 d-flex justify-content-center">
+      <span *ngFor="let button of buttons">
+        <input type="text" class="btn btn-outline-dark mt-4" readonly style="width: 40px;" id={{button}} value={{button}} (click)="nextPage($event)">
+      </span>
     </div>
   </section>

@@ -13,7 +13,7 @@ export class UserCardComponent {
 router = inject(Router)
 userService = inject(UserService)
 
-async deleteUser(id:number):Promise<void>{
+async deleteUser(id:string):Promise<void>{
   const res = confirm("Seguro de que quieres borrar el post?");
   if (res) {
     let response = await this.userService.delete(id)
