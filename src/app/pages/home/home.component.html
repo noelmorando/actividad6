@@ -1,6 +1,6 @@
   <section class="container mt-3 mb-3">
-    <div class="row g-3">
-      <article class="col-12 col-md-6 col-lg-4" *ngFor="let user of infoUsers">
+    <div class="row g-3 align-items-end">
+      <article class="col-12 col-md-6 col-lg-4" *ngFor="let user of infoUsers"> 
         <app-user-card [oneUser]="user"></app-user-card>
       </article>
     </div>

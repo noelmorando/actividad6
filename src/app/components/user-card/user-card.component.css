@@ -5,5 +5,15 @@ img{
     border-radius: 50%;
 }
 .card{
-    height: 101%;
+    min-height: 620px;
+}
+.position{
+    position: absolute; 
+    bottom: 0px;
+    right: 0px;
+    left: 0px;
+    padding: 30px;
+}
+h3{
+    text-align: center;
 }
