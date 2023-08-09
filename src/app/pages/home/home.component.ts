@@ -15,7 +15,6 @@ export class HomeComponent {
   page:number=1
   pages:number=2
   buttons:number[]=[]
-  isdisabled:string=`false`
   async ngOnInit():Promise<void>{
     try{
       this.arrUsers= await this.userService.getAll(this.page)
@@ -27,7 +26,7 @@ export class HomeComponent {
       this.buttons[i]=i+1
     }
   }
-  async nextPage(page:any){
+  async nextPage(page:any, buttons:number[]){
     this.page=Number(page.target.value)
     try{
       this.arrUsers= await this.userService.getAll(this.page)
