@@ -5,7 +5,8 @@ img{
     border-radius: 50%;
 }
 .card{
-    min-height: 620px;
+    min-height: 560px;
+    min-width: 310px;
 }
 .position{
     position: absolute; 
@@ -16,4 +17,10 @@ img{
 }
 h3{
     text-align: center;
+}
+@media screen and (max-width:768px) {
+    .card{
+        min-height: 620px;
+        max-width: 450px;
+    } 
 }
